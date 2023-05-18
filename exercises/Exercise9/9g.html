@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe();" class="js-subscribe-button">
+    Subscribe
+    </button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders from $40 = FREE shipping. </p>
+
+    <input onkeydown="handleCostKeydown(event);" placeholder="Cost of order" class="js-cost-input">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+    
+
+    <script>
+
+      document.body =
+      console.log('something');
+      alert();
+
+      window.document.body = 
+      window.console.log('window');
+      window.alert();
+
+
+      String(25);
+      console.log('25' - 5)
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter'){
+        calculateTotal();
+    }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        // Converting in cents, to stop float numbers from making errors
+        let cost = Number(inputElement.value) * 100;
+        
+        if (cost < 4000) {
+          cost = (cost + 1000);          
+        }
+        document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`;
+      }
+      function subscribe() {
+        const buttonElement = (document.querySelector('.js-subscribe-button'));
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed';
+        } else {
+          buttonElement.innerText = 'Subscribe';
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+

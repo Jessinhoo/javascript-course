@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Exercise 9</title>
+  </head>
+  <body>
+    <!-- Exercise 9a-c -->
+    <button class="js-button-9a">9a</button>
+    <button class="js-button-9b">9b</button>
+    <p></p>
+    <button onclick="clickedHeadsTails('heads')" class="js-heads-btn">heads</button>
+    <button onclick="clickedHeadsTails('tails')" class="js-tails-btn">tails</button>
+    <p class="js-result"></p>
+
+    <!-- Exercise 9d-f -->
+    <input class="js-input" placeholder="Name">
+    <button onclick="submitButtonClicked()" class="js-submit">Submit</button>
+    <p class="js-message"></p>
+
+
+    <script>
+
+      //Exercise 9a-c
+      console.log(document.querySelector('.js-button-9a'));
+      document.querySelector('.js-button-9b').innerHTML = '9b done!';
+      
+      function clickedHeadsTails(button) { 
+          document.querySelector('.js-result').innerHTML = `You chose: ${button}.`
+      }
+
+      //Exercise 9d-f
+      function submitButtonClicked(){
+        const name = document.querySelector('.js-input').value;
+        document.querySelector('.js-message').innerHTML = `Your name is: ${name}`;
+        console.log(name);
+      }
+
+      function keyDown(event) {
+        if(event.key === 'Enter'){
+          const inputTextElement = document.querySelector('.js-input').value;
+          console.log(inputTextElement);
+        }
+
+      }
+      
+
+    </script>
+  </body>
+</html>
