@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="10i.css">
+  </head>
+  <body>
+    <p class="js-output output"></p>
+    
+    <p>
+      <button class="number-btn" onclick="
+      updateCalculation('1');
+      ">1</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('2');
+      ">2</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('3');
+      ">3</button>
+
+      <button class="operation-btn" onclick="
+      updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button class="number-btn" onclick="
+      updateCalculation('4');
+      ">4</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('5');
+      ">5</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('6');
+      ">6</button>
+
+      <button class="operation-btn" onclick="
+      updateCalculation(' - ');
+      ">-</button>
+    </p>
+    
+    <p>
+      <button class="number-btn" onclick="
+      updateCalculation('7');
+      ">7</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('8');
+      ">8</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('9');
+      ">9</button>
+
+      <button class="operation-btn" onclick="
+      updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button class="number-btn" onclick="
+      updateCalculation('0');
+      ">0</button>
+
+      <button class="number-btn" onclick="
+      updateCalculation('.');
+      ">.</button>
+
+      <button class="equals-btn" onclick="
+      calculation = eval(calculation);
+      console.log(calculation);
+      localStorage.setItem('calculation', calculation);
+      document.querySelector('.js-output').innerHTML = calculation;
+      ">=</button>
+
+      <button class="operation-btn" onclick="
+      updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+  </p>
+    <button class="clear-btn" onclick="
+    calculation = '';
+    console.log('Cleared.');
+    document.querySelector('.js-output').innerHTML = '';
+    localStorage.setItem('calculation', '');
+    ">Clear</button>
+    
+    
+    <script src="10i.js"></script>
+  </body>
+</html>
