@@ -127,7 +127,7 @@
         }
 
         if(nums.length === 1){
-          return 'At least two numbers needed'
+          return 'At least two numbers needed';
         }
 
         const result = {
@@ -157,16 +157,173 @@
           const word = [words[i]];
           if(!result[word]){
             result[word] = 1;
-            console.log('minonin' + result);
           } else {
             result[word]++;
-            console.log('me' + result);
           }
         }
         return result;
       }
+      console.log(countWords(['water', 'melon', 'melon', 'water', 'apple']));
 
-      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+      //11o+p
+      console.log('11o:');
+      const stringArray1 = ['hello', 'world', 'search', 'good', 'search'];
+      const stringArray2 = ['not', 'found'];
+
+      function isSearchInside(array) {
+        let isSearchInside = 0;
+        let indexOfSearch = false;
+        for (let i = 0; i < array.length; i++){
+          if (array[i] === 'search'){
+            indexOfSearch = i;
+            //11p
+            break;
+          }
+        }
+        if (indexOfSearch){
+          console.log(indexOfSearch);
+        } else {
+          console.log('-1');
+        }
+      }
+      isSearchInside(stringArray1); //2
+      isSearchInside(stringArray2); //-1
+
+      //11q
+      console.log('11q:')
+      function findIndex(array, word){
+        for(let i = 0; i < array.length; i++){
+          if(array[i] === word){
+            return i;
+            break;
+          }
+        }
+        return -1;
+      }
+
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+      //11r
+      console.log('11r:')
+      function removeEggs(foods){
+        let resultCounter = -1;
+        let result = [];
+        for (let i = 0; i < foods.length; i++){
+          if (foods[i] === 'egg'){
+            continue;
+          } else {
+            resultCounter++;
+            result[resultCounter] = foods[i];
+          }
+        }
+        return result;
+      }
+      console.log(removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+      //11s
+      console.log('11s:')
+      function removeEggs1(foods){
+        let eggCounter = 0;
+        let resultCounter = -1; //to fit any other result than egg in the correct position in the final array
+        let result = [];
+        for (let i = 0; i < foods.length; i++){
+          if (foods[i] === 'egg' && eggCounter <= 1){
+            eggCounter++;
+            continue;
+          } else {
+            resultCounter++;
+            result[resultCounter] = foods[i];
+          }
+        }
+        return result;
+      }
+      
+      console.log(removeEggs1(['egg', 'apple', 'egg', 'egg', 'ham'])); //removes the first two eggs
+
+      //11t
+      console.log('11t:');
+      function removeEggs2(foods){
+        let eggCounter = 0;
+        let resultCounter = -1; //to fit any other result than egg in the correct position in the final array
+        let result = [];
+        foods = foods.reverse();
+        for (let i = 0; i < foods.length; i++){
+          if (foods[i] === 'egg' && eggCounter <= 1){
+            eggCounter++;
+            continue;
+          } else {
+            resultCounter++;
+            result[resultCounter] = foods[i];
+          }
+        }
+        return result.reverse();
+      }
+
+      console.log(removeEggs2(['egg', 'apple', 'egg', 'egg', 'ham'])); //removes the last two eggs
+      console.log(removeEggs2(['egg', 'apple', 'egg', 'egg', 'ham', 'egg'])); //removes the last two eggs
+      
+       //11u - makes the same as 11t, but instead of reversing the original array, the copy of the array is reversed and used
+       console.log('11u:');
+      function removeEggs2(foods){
+        let eggCounter = 0;
+        let resultCounter = -1; //to fit any other result than egg in the correct position in the final array
+        let result = [];
+        foodsCopy = foods.reverse();
+        for (let i = 0; i < foodsCopy.length; i++){
+          if (foods[i] === 'egg' && eggCounter <= 1){
+            eggCounter++;
+            continue;
+          } else {
+            resultCounter++;
+            result[resultCounter] = foodsCopy[i];
+          }
+        }
+        return result.reverse();
+      }
+
+      console.log(removeEggs2(['egg', 'apple', 'egg', 'egg', 'ham'])); //removes the last two eggs
+      console.log(removeEggs2(['egg', 'apple', 'egg', 'egg', 'ham', 'egg'])); //removes the last two eggs
+
+      //11v
+      console.log('11v:');
+      for (let i = 1; i <= 20; i++){
+        if(i % 3 === 0 && i % 5 === 0) {
+          console.log('FizzBuzz');
+        } else if(i % 5 === 0) {
+          console.log('Buzz');
+        } else if (i % 3 === 0){
+          console.log('Fizz');
+        } else {
+          console.log(i);
+        }
+      }
+
+      //11w
+      console.log('11w:')
+      function findIndex(array, word){
+        for(let i = 0; i < array.length; i++){
+          if(array[i] === word){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function unique(array){
+        const result = [];
+        for (let i = 0; i < array.length; i++){
+          const word = array[i];
+          if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+        return result;
+      }
+      console.log(unique(['green', 'red', 'blue', 'red']));
+      console.log(unique(['red', 'green', 'green', 'red']));
+
+      
 
     </script>
   </body>
