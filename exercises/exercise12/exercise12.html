@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!--12g-->
+    <title>App</title>
+    <link rel="stylesheet" href="exercise12.css">
+  </head>
+    <!--12c-->
+    <p>Start Button: Exercise 12c</p>
+    <button class="js-1sec-button" onclick="oneSecClicked();">Start</button>
+
+    <p></p> <!-- Just for new line -->
+    <!--12d-->
+    <p>Add to cart Button: Exercise 12d</p>
+    <button onclick="addToCartClicked()">Add to cart</button>
+    <p class="js-add-to-cart-text"></p>
+
+    <!--12g-->
+    <button onclick="
+    startNotification();
+    updateCounter(1);
+    ">Add</button>
+
+    <button onclick="
+    if (messages > 0){
+      updateCounter(-1)
+    }
+    if (messages === 0){
+      stopNotification();
+    }
+    ">Remove</button>
+  <body>
+    <script src="exercise12.js"></script>
+  </body>
+</html>
