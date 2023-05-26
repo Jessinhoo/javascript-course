@@ -1,0 +1,20 @@
+body {
+
+}
+
+.stopwatch {
+  font-size: 25px;
+  border: 1px solid black;
+}
+
+.stopwatch-counter,
+.stopwatch-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.stopwatch-buttons button{
+  width: 100px;
+}
