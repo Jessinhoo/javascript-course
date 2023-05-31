@@ -7,16 +7,19 @@
   <body>
     <div class="stopwatch">
       <div class="stopwatch-counter">
-        <p class="stopwatch-hours js-stopwatch-hours">00</p>
+        <p class="stopwatch-minutes js-stopwatch-minutes-additional-digit">0</p>
+        <p class="stopwatch-minutes js-stopwatch-minutes">0</p>
         <p>:</p>
-        <p class="stopwatch-minutes js-stopwatch-minutes">00</p>
+        <p class="additional-seconds-digit">0</p>
+        <p class="stopwatch-seconds js-stopwatch-seconds">0</p>
         <p>:</p>
-        <p class="stopwatch-seconds js-stopwatch-seconds">00</p>
+        <p class="additional-milliSeconds-digit">0</p>
+        <p class="stopwatch-milliSeconds js-stopwatch-milliSeconds">0</p>
       </div>
       <div class="stopwatch-buttons">
-        <button class="start-button">Start</button>
-        <button class="stop-button">Stop</button>
-        <button class="reset-button">Reset</button>
+        <button class="js-start-button">Start</button>
+        <button class="js-stop-button">Stop</button>
+        <button class="js-reset-button">Reset</button>
       </div>
     </div>
     <script src="stopwatch.js">
